@@ -4,8 +4,6 @@ from: ubuntu:24.04
 %files
     docs/sherlock/    sherlock
     docs/farmshare/   farmshare
-    docs/oak/         oak
-    docs/elm/         elm
     requirements.txt
     
 %environment
