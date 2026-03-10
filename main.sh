@@ -34,19 +34,25 @@ else
     echo "Model will download from HuggingFace using MODEL_PATH ID"
 fi
 
-echo "Refreshing documentation repositories..."
-//bash filemagic.sh
+# echo "Refreshing documentation repositories..."
+# bash filemagic.sh
 
 # Uncomment these if you want to verify cuda/pytorch works:
 # apptainer exec --nv $SIF_NAME python3 -c "import torch; print(torch.__version__); print(torch.cuda.is_available())"
 # apptainer exec --nv $SIF_NAME python3 -c "import transformers; print(transformers.__version__)"
 
+
+echo "Apptaining from main.sh"
+
+# Comment this out if you don't want to build the sif
+ 
+apptainer build -F --nv $SIF_NAME $SIF_DEF
 # Start chatbot instance WITH docs bind mount
-echo "Starting chatbot instance..."
-apptainer instance start \
-    --nv \
-    --bind "$PWD:$PWD" \
-    $SIF_NAME chatapi
+# echo "Starting chatbot instance..."
+# apptainer instance start \
+#     --nv \
+#     --bind "$PWD:$PWD" \
+#     $SIF_NAME chatapi
 
 # Run your FastAPI app
 echo "Starting FastAPI server..."
