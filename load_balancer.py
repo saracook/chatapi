@@ -16,8 +16,8 @@ logger = logging.getLogger(__name__)
 
 # Worker configuration
 WORKERS = [
-    {"url": "http://localhost:8001", "gpu": "cuda:0"},
-    {"url": "http://localhost:8002", "gpu": "cuda:1"},
+    {"url": "http://localhost:7001", "gpu": "cuda:0"},
+    {"url": "http://localhost:7002", "gpu": "cuda:1"},
 ]
 
 # Queue and worker state
@@ -132,4 +132,4 @@ async def stats():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8000, log_level="info")
+    uvicorn.run(app, host="127.0.0.1", port=7000, log_level="info")

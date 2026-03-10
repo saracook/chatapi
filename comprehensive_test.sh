@@ -2,7 +2,7 @@
 # Comprehensive Test: Multi-GPU, Citations, and Semantic Caching
 
 set -e
-ENDPOINT="http://localhost:8000/query/"
+ENDPOINT="http://localhost:7000/query/"
 RESULTS_DIR="/tmp/chatbot_test_$(date +%s)"
 mkdir -p "$RESULTS_DIR"
 
