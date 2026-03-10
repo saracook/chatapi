@@ -470,10 +470,17 @@ app = FastAPI(
     lifespan=lifespan
 )
 
+# Add CORS middleware - put this right after creating the FastAPI app
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.CORS_ORIGINS,
-    allow_credentials=True, allow_methods=["*"], allow_headers=["*"],
+    allow_origins=[
+        "https://docs-dev.carina.stanford.edu",
+        "https://docs.carina.stanford.edu",  # Add production domain
+        "http://localhost:4000",  # If you test locally
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods (GET, POST, etc.)
+    allow_headers=["*"],  # Allows all headers
 )
 
 @app.get("/", summary="Root endpoint")
