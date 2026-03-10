@@ -35,7 +35,7 @@ else
 fi
 
 echo "Refreshing documentation repositories..."
-bash filemagic.sh
+//bash filemagic.sh
 
 # Uncomment these if you want to verify cuda/pytorch works:
 # apptainer exec --nv $SIF_NAME python3 -c "import torch; print(torch.__version__); print(torch.cuda.is_available())"
