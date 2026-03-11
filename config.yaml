@@ -7,7 +7,7 @@ model:
   # HuggingFace hub local path (relative to project root)
   # Examples:
   #   - ".cache/huggingface/hub/models--google--gemma-2-9b-it/snapshots/11c9b309abf73637e4b6f9a3fa1e92e615547819"
-  path: ".cache/huggingface/hub/models--google--gemma-2-9b-it/snapshots/11c9b309abf73637e4b6f9a3fa1e92e615547819"
+  path: "/srv/ada-chatbot/models/models--google--gemma-2-9b-it/snapshots/11c9b309abf73637e4b6f9a3fa1e92e615547819"
   
   # Model type - affects prompt formatting
   # Options: "gemma", "llama", "tinyllama"
@@ -45,6 +45,7 @@ api:
   cors_origins:
     - "http://localhost:5000"
     - "http://127.0.0.1:5000"
+    - "https://docs-dev.carina.stanford.edu"
 
   # Each cluster has docs in a separate directory
   CLUSTERS:
