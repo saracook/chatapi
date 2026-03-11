@@ -47,13 +47,6 @@ api:
     - "http://127.0.0.1:5000"
     - "https://docs-dev.carina.stanford.edu"
 
-  # Each cluster has docs in a separate directory
-  CLUSTERS:
-    sherlock: "sherlock"
-    farmshare: "farmshare"
-    oak: "oak"
-    elm: "elm"
-
 # Caching Configuration
 caching:
   # Enable semantic response caching (requires sentence-transformers)
