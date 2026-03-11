@@ -5,7 +5,9 @@
 # Model Configuration
 model:
   # HuggingFace hub local path (relative to project root)
-  - path: "/srv/ada-chatbot/models/models--google--gemma-2-9b-it/snapshots/11c9b309abf73637e4b6f9a3fa1e92e615547819"
+  # Examples:
+  #   - ".cache/huggingface/hub/models--google--gemma-2-9b-it/snapshots/11c9b309abf73637e4b6f9a3fa1e92e615547819"
+  path: "/srv/ada-chatbot/models/models--google--gemma-2-9b-it/snapshots/11c9b309abf73637e4b6f9a3fa1e92e615547819"
   
   # Model type - affects prompt formatting
   # Options: "gemma", "llama", "tinyllama"
