@@ -4,6 +4,7 @@ from: ubuntu:24.04
 %files
     docs/sherlock/    sherlock
     docs/farmshare/   farmshare
+    
     requirements.txt
     
 %environment
